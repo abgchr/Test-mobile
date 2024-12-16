@@ -1,0 +1,543 @@
+/** {
+  box-sizing: border-box;
+}*/
+
+html {
+  height: 100%;
+}
+
+body {
+  /*background: linear-gradient(var(--farbe2), var(--farbe1));*/
+  background: var(--farbe2);
+  margin: 0px;
+  padding: 0px;
+  /*margin-right: 0px;
+  padding-right: 0px;*/
+  min-height: 100%;
+  flex-direction: column;
+
+}
+
+/*body:not(nav)
+{padding: inherit;
+  padding: 50px;}*/
+
+:root {
+  --farbe1: rgb(255, 251, 241);
+  --farbe2: rgb(246, 174, 7);
+  --farbe3: rgb(12, 31, 65);
+}
+
+/*HEADER*/
+header {
+  padding: 10px
+}
+
+/*FONTS*/
+
+@font-face {
+  font-family: Avenir-Light;
+  src: url(Fonts/Avenir/Avenir-Light.ttf);
+}
+
+@font-face {
+  font-family: Avenir-Book;
+  src: url(Fonts/Avenir/Avenir-Book.ttf);
+}
+
+@font-face {
+  font-family: Avenir-Roman;
+  src: url(Fonts/Avenir/Avenir-Roman.ttf);
+}
+
+@font-face {
+  font-family: Avenir-Heavy;
+  src: url(Fonts/Avenir/Avenir-Heavy.ttf);
+}
+
+@font-face {
+  font-family: Avenir-Black;
+  src: url(Fonts/Avenir/Avenir-Black.ttf);
+}
+
+@font-face {
+  font-family: CreatoDisplay-Regular;
+  src: url(Fonts/CreatoDisplay/CreatoDisplay-Regular.otf)
+}
+
+@font-face {
+  font-family: CreatoDisplay-Medium;
+  src: url(Fonts/CreatoDisplay/CreatoDisplay-Medium.otf)
+}
+
+@font-face {
+  font-family: CreatoDisplay-Black;
+  src: url(Fonts/CreatoDisplay/CreatoDisplay-Black.otf)
+}
+
+@font-face {
+  font-family: CreatoDisplay-Bold;
+  src: url(Fonts/CreatoDisplay/CreatoDisplay-Bold.otf)
+}
+
+@font-face {
+  font-family: CreatoDisplay-ExtraBold;
+  src: url(Fonts/CreatoDisplay/CreatoDisplay-ExtraBold.otf)
+}
+
+
+
+h1.titel {
+  font-size: 2.5rem;
+  font-family: Avenir-Black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 2.5rem;
+  text-align: center;
+  color: var(--farbe2);
+  margin: 0px;
+  padding: 0px;
+  /*margin-bottom: 0px;
+  padding-bottom: 0px;*/
+}
+
+h2.titel {
+  font: inherit;
+  font-size: 1.5rem;
+  font-family: Avenir-Roman;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--farbe2);
+  margin: 0px;
+  padding: 0px;
+}
+
+h3 {
+  font-size: 0.9rem;
+  font-family: Avenir-Roman;
+  text-align: left;
+  padding: 0px;
+  margin: 0px;
+  text-transform: uppercase;
+  color: var(--farbe3);
+}
+
+h3.index {}
+
+p {
+  font-family: Avenir-roman;
+  font-size: 0.9rem;
+  color: var(--farbe3);
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  color: var(--farbe3);
+  text-decoration: none;
+}
+
+/*MENU----------------------------------------------*/
+
+nav {
+  position: sticky;
+  top: 0;
+  margin-bottom: 30px;
+  /*z-index: 10;*/
+}
+
+.menu ul {
+  list-style-type: none;
+  background-color: var(--farbe3);
+  text-align: center;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+  padding-left: 0px;
+  margin-top: 0px;
+  width: 100%;
+}
+
+.menu a {
+  font-family: Avenir-Black;
+  text-decoration: none;
+  color: var(--farbe1);
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 0.68rem;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+}
+
+.menu li {
+  display: inline;
+}
+
+.menu a:hover {
+  background-color: var(--farbe1);
+  color: var(--farbe3);
+}
+
+/*GALERIE*/
+
+/* Basis-Stile für die Galerie */
+.gallery {
+  background-color: var(--farbe2);
+  margin-bottom: 0.8rem;
+  transition: opacity 0.3s ease;
+}
+
+.gallery:hover {
+  opacity: 0.8;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.desc {
+  padding: 0;
+  font-family: Avenir-Roman;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+/* Setzt den Box-Sizing auf border-box für alle Elemente */
+* {
+  box-sizing: border-box;
+}
+
+/* Grid-Layout für die Galerie */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexibles Grid mit mindestens 300px pro Spalte */
+  gap: 20px; /* Abstand zwischen den Bildern */
+}
+
+.gallery {
+  padding: 0px;
+  background-color: var(--farbe2);
+  border-radius: 8px; /* Optional: Fügt dem Container abgerundete Ecken hinzu */
+}
+
+.desc {
+  text-align: center;
+  font-family: Avenir-Roman;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Sicherstellen, dass die Bilder korrekt angezeigt werden */
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Responsive Anpassungen für kleinere Bildschirmgrößen */
+@media only screen and (max-width: 700px) {
+  .gallery-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Kleinere Spaltenbreite bei mittleren Bildschirmen */
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .gallery-grid {
+    grid-template-columns: 1fr; /* Nur eine Spalte bei kleinen Bildschirmen */
+  }
+}
+
+main,
+footer {
+  padding: 2rem;
+}
+
+/*SLIDESHOW*/
+
+* {
+  box-sizing: border-box
+}
+
+.slideshow-desc {
+  width: 400px;
+  display: column;
+}
+
+.slideshow-total {
+  display: flex;
+}
+
+@media screen and (max-width: 900px) {
+  .slideshow-total {
+    flex-direction: column;
+  }
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 600px;
+  position: relative;
+  /*margin: 0 auto;*/
+  float: left;
+  overflow: hidden;
+  /*display: flex;*/ 
+  flex-direction: column;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: gray;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  top: 200px;
+}
+
+.prev {
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  /*position: absolute;*/
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  font-family: Avenir-Roman;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+
+/*KONTAKTFORMULAR*/
+
+div.kontaktformular {
+  margin: 0px;
+  padding: 0px;
+}
+
+.kontakt-links {
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+  text-align: left;
+  display: flex;
+}
+
+
+.kontaktfeld {
+  width: 400px;
+  height: 50px;
+  border: 2px solid var(--farbe1);
+  outline: none;
+  padding-left: 25px;
+  background-color: var(--farbe1);
+  border-radius: 50px;
+  font-family: Avenir-Roman;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.contact-left textarea {
+  height: 150px;
+  padding-top: 15px;
+  border-radius: 25px;
+}
+
+.contact-left textarea:focus {
+  border-color: var(--farbe3);
+  outline: none;
+}
+
+
+input.kontaktfeld:focus {
+  border-color: var(--farbe3);
+}
+
+.kontaktfeld::placeholder {
+  color: var(--farbe3);
+}
+
+.contact-left button {
+  padding: 15px 30px;
+  font-size: 16px;
+  color: var(--farbe1);
+  gap: 10px;
+  border: none;
+  border-radius: 50px;
+  /*background: linear-gradient(270deg, var(--farbe3), var(--farbe2));*/
+  background: var(--farbe3);
+  cursor: pointer;
+  text-align: left;
+}
+
+div.sterntext {
+  font-family: Avenir-Roman;
+  color: var(--farbe3);
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+img.kontakt {
+  float: right;
+}
+
+
+
+
+/*ABOUT*/
+div.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  /*flex-wrap: wrap;*/
+  padding: 20px;
+}
+
+div.about1 {
+  width: 50%;
+  margin: 0;
+  text-align: left;
+}
+
+div.about2 {
+  width: 50%;
+  margin: 0;
+}
+
+img.about {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+@media only screen and (max-width: 800px) {
+
+  div.about {
+    flex-direction: column;
+  }
+
+  div.about1,
+  div.about2 {
+    width: 100%;
+    text-align: left;
+  }
+
+  img.about-img {
+    width: 80%;
+    max-width: 400px;
+  }
+}
+
+label {
+  font-family: Avenir-Book;
+}
+
+/*FOOTER*/
+
+footer {
+  background-color: var(--farbe2);
+  display: flex;
+  position: relative;
+  margin-top: auto;
+}
+
+div.footer {
+  display: flex;
+  margin: 00px;
+}
+
+div.footer-rechts {
+  font-family: Avenir-Roman;
+  font-size: 14px;
+  color: var(--farbe3);
+  padding: 0px;
+  margin: 00px;
+  width: 50vw;
+  /*position: relative;*/
+}
+
+div.footer-links {
+  font-family: Avenir-Roman;
+  font-size: 14px;
+  color: var(--farbe3);
+  padding: 0px;
+  margin: 00px;
+  width: 50vw;
+  /*position: relative;*/
+}
+
+a.footer-links {
+  font-family: Avenir-Roman;
+}
+
+* {
+  box-sizing: border-box
+}
